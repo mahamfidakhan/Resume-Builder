@@ -5,19 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume Form</title>
   <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="/form.css">
 </head>
 <body>
   <div class="form-container">
     <h1>Enter Your Resume Details</h1>
     <form id="resumeForm">
-      <!-- Name and Title Section -->
       <label for="name">Full Name</label>
       <input type="text" id="name" required>
 
       <label for="title">Job Title</label>
       <input type="text" id="title" required>
 
-      <!-- Contact Information Section -->
       <label for="email">Email</label>
       <input type="email" id="email" required>
 
@@ -27,29 +26,40 @@
       <label for="location">Location</label>
       <input type="text" id="location" placeholder="City, Country" required>
 
-      <!-- Education Section -->
       <label for="education">Education</label>
       <textarea id="education" placeholder="List your education" required></textarea>
 
-      <!-- Experience Section -->
       <label for="experience">Work Experience & Projects</label>
       <textarea id="experience" placeholder="Describe your work experience and key projects" required></textarea>
 
-      <!-- Skills Section -->
       <label for="skills">Skills (format: skill:level, e.g., HTML:80)</label>
       <input type="text" id="skills" placeholder="e.g. HTML:80, CSS:70" required>
 
-      <!-- Links Section -->
       <label for="links">Links (comma-separated)</label>
       <input type="text" id="links" placeholder="Portfolio, LinkedIn, GitHub" required>
 
-      <!-- Image Upload Section -->
       <label for="image">Upload Your Photo</label>
-<input type="file" id="image" accept="image/*" required>
-<br>
+      <input type="file" id="image" accept="image/*" required>
+
       <button type="submit">Save and View Resume</button>
     </form>
   </div>
-  <script src="form.js"></script>
+
+  <!-- Resume Display Section -->
+  <div class="resume-display" id="resumeDisplay" style="display: none;">
+    <h1>Resume</h1>
+    <p><strong>Full Name:</strong> <span id="displayName"></span></p>
+    <p><strong>Job Title:</strong> <span id="displayTitle"></span></p>
+    <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+    <p><strong>Phone:</strong> <span id="displayPhone"></span></p>
+    <p><strong>Location:</strong> <span id="displayLocation"></span></p>
+    <p><strong>Education:</strong> <span id="displayEducation"></span></p>
+    <p><strong>Experience:</strong> <span id="displayExperience"></span></p>
+    <p><strong>Skills:</strong> <span id="displaySkills"></span></p>
+    <p><strong>Links:</strong> <span id="displayLinks"></span></p>
+    <img id="displayImage" alt="Uploaded Photo" width="150"/>
+  </div>
+
+  <script src="./form.js"></script>
 </body>
-</html>  
+</html>

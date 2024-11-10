@@ -1,0 +1,73 @@
+.resume-display {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  /* Center the header */
+  .resume-display h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Make the text responsive */
+  .resume-display p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 4px 0;
+    color: #444;
+  }
+  
+  .resume-display p strong {
+    color: #333;
+  }
+  
+  /* Responsive styling for images */
+  .resume-display img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
+  }
+  
+  /* Responsive layout for small screens */
+  @media (max-width: 600px) {
+    .resume-display {
+      padding: 15px;
+    }
+  
+    .resume-display h1 {
+      font-size: 1.8em;
+    }
+  
+    .resume-display p {
+      font-size: 0.95rem;
+    }
+  }
+  
+  /* Medium screens styling */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .resume-display {
+      padding: 18px;
+    }
+  
+    .resume-display h1 {
+      font-size: 1.9em;
+    }
+  
+    .resume-display p {
+      font-size: 1rem;
+    }
+  }
+  
